@@ -14,13 +14,14 @@ public class No_0002_Add_Two_Numbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = null;
 
+        // If one is null, return the other one
         if (l1 == null) {
             return l2;
         } else if (l2 == null) {
             return l1;
         }
 
-
+        //TODO
 
         return result;
     }
