@@ -7,7 +7,7 @@ package easy;
  * 如果没有, 则把target与当前数字的差值diff作为key, 当前数字在nums中的索引作为value存入HashMap中.
  * 如果有, 则表示成功匹配, 则把`key对应的value`和`当前数字在nums中的索引`返回即可.
  *
- * 简单来说就是用前面数字与target的差值diff作为HashMap的keys, 来避免双重循环
+ * 简单来说就是用前面数字与target的差值diff作为HashMap的keys, 来避免双重循环.
  */
 
 import java.util.*;
