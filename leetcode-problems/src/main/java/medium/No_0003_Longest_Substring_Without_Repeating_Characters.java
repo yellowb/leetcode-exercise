@@ -17,33 +17,18 @@ public class No_0003_Longest_Substring_Without_Repeating_Characters {
 
         for (; tailIdx < length; tailIdx++) {
             char c = s.charAt(tailIdx);
-            if (map.containsKey(c)) {
+            if (map.containsKey(c) && map.get(c) >= headIdx) {
                 int currentRoundCount = tailIdx - headIdx;
                 if (currentRoundCount > longestCount) {
                     longestCount = currentRoundCount;
                 }
                 int newHeadIdx = map.get(c) + 1;
-                this.removeCharsFromMap(map, s, headIdx, newHeadIdx);
                 headIdx = newHeadIdx;
             }
             map.put(c, tailIdx);
         }
 
         return (tailIdx - headIdx) > longestCount ? (tailIdx - headIdx) : longestCount;
-    }
-
-    /**
-     * Remove chars from Map
-     *
-     * @param map
-     * @param s
-     * @param from
-     * @param to
-     */
-    public void removeCharsFromMap(Map<Character, Integer> map, String s, int from, int to) {
-        for (int i = from; i < to; i++) {
-            map.remove(s.charAt(i));
-        }
     }
 
     public static void main(String[] args) {
