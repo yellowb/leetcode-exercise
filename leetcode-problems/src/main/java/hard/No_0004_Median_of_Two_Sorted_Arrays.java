@@ -3,7 +3,7 @@ package hard;
 /**
  * https://leetcode.com/problems/median-of-two-sorted-arrays/description/
  *
- *
+ * 暂时是O(m+n)复杂度
  */
 public class No_0004_Median_of_Two_Sorted_Arrays {
 
@@ -114,15 +114,15 @@ public class No_0004_Median_of_Two_Sorted_Arrays {
     public double medianFromSingleArray(int[] nums) {
         int length = nums.length;
         if (length % 2 == 0) {
-            return (nums[length / 2 - 1] + nums[length / 2]) / 2;
+            return (nums[length / 2 - 1] + nums[length / 2]) / 2.0;
         } else {
             return nums[length / 2];
         }
     }
 
     public static void main(String[] args) {
-        int[] nums1 = new int[] {10, 50, 60};
-        int[] nums2 = new int[] {2, 3, 6};
+        int[] nums1 = new int[] {};
+        int[] nums2 = new int[] {2, 3};
 
         No_0004_Median_of_Two_Sorted_Arrays obj = new No_0004_Median_of_Two_Sorted_Arrays();
 
